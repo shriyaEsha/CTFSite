@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>AngularJS Masonry Directive</title>
+        <link href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/united/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                margin-top: 1em;
+            }
+
+            .masonry-brick {
+                margin: 1em;
+                display: none;
+            }
+
+            .masonry-brick.loaded {
+                display: block;
+            }
+        </style>
+    </head>
+    <body class="container" ng-app="masonryApp">
+        <div class="row">
+            <div class="span12">
+                <h2>Getting Started</h2>
+                <ol>
+                    <li>Install with bower: <code>bower install --save
+                    angular-masonry</code></li>
+                    <li>Include <code>angular-masonry.js</code>.</li>
+                    <li>Add <code>wu.masonry</code> to you app modules.</li>
+                    <li>Use the <code>masonry</code> directive.</li>
+                </ol>
+
+                If you hate proper package management, you can also
+                directly download
+                <a href="./angular-masonry.js">angular-masonry.js</a> or
+                <a href="./angular-masonry.min.js">angular-masonry.min.js</a>.
+            </div>
+        </div>
+        <hr>
+        <div class="row" ng-controller="DemoCtrl">
+            <div class="span12">
+                <h2>In Action</h2>
+                <div class="btn-group">
+                    <button class="btn btn-primary" ng-click="add()">Add</button>
+                    <button class="btn btn-danger" ng-click="remove()">Remove</button>
+                </div>
+                <div masonry>
+                    <div class="masonry-brick" ng-repeat="brick in bricks">
+                        <img ng-src="{{ brick.src }}" alt="A masonry brick">
+                    </div>
+                </div>
+
+                <h2>Code</h2>
+                <pre ng-non-bindable>&lt;div <strong>masonry</strong>&gt;
+    &lt;div <strong>class="masonry-brick"</strong> ng-repeat="brick in bricks"&gt;
+        &lt;img ng-src="{{ brick.src }}" alt="A masonry brick"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+        </div>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/masonry.js"></script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+        <script src="js/angular-masonry.js"></script>
+
+        <script>
+            angular.module('masonryApp', ['wu.masonry']).
+                controller('DemoCtrl', function ($scope) {
+                    function genBrick() {
+                        var height = ~~(Math.random() * 500) + 100;
+                        var id = ~~(Math.random() * 10000);
+                        return {
+                            src: 'http://lorempixel.com/g/280/' + height + '/?' + id
+                        };
+                    };
+
+                    $scope.bricks = [
+                        genBrick(),
+                        genBrick(),
+                        genBrick(),
+                        genBrick(),
+                        genBrick()
+                    ];
+
+                    $scope.add = function add() {
+                        $scope.bricks.push(genBrick());
+                    };
+
+                    $scope.remove = function remove() {
+                        $scope.bricks.splice(
+                            ~~(Math.random() * $scope.bricks.length),
+                            1
+                        )
+                    };
+                });
+        </script>
+    </body>
+</html>

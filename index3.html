@@ -1,0 +1,44 @@
+<html>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/site3.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Owl Carousel Assets -->
+<link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="owl-carousel/owl.theme.css" rel="stylesheet">
+
+
+<body ng-app="myApp">
+	<!--navbar-->
+<i class="scrollUp fa fa-chevron-up"></i>	
+	<div ng-include="'partials/navbar.html'"></div>
+	<!--views come here-->
+	<div ng-view></div>
+
+	<div ng-include="'partials/footer.html'"></div>
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="owl-carousel/owl.carousel.js"></script>
+<script src="js/jquery.lettering.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/jquery.textillate.js"></script>
+<!--angular-->
+ <script type="text/javascript" src="js/angular/angular.min.js"></script>
+ <script type="text/javascript" src="js/angular-route/angular-route.js"></script>
+ <script type="text/javascript" src="js/angular-sanitize/angular-sanitize.min.js"></script>
+ <script type="text/javascript" src="appjs/app.js"></script>
+ <script type="text/javascript" src="appjs/controller.js"></script>
+ <script type="text/javascript" src="appjs/services.js"></script>
+ <script type="text/javascript" src="appjs/directives.js"></script>
+
+<script>
+$(document).ready(function(){
+$('html').scrollTop(0);
+
+});
+</script>
+
+</html>

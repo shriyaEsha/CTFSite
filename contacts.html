@@ -1,0 +1,251 @@
+<html>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<style>
+html{
+overflow-x:hidden;
+}
+.hexagon{
+	position:relative;
+	width:300px;
+	height:173.21px;
+	background:#000;
+	margin:86.6px 0;
+	margin-right:10px;
+	box-shadow:0px 2px 2px #d2d2d2;
+	margin-bottom:90px;
+	cursor: pointer;
+	-webkit-transition:all 0.4s;
+	-moz-transition:all 0.4s;
+	transition:all 0.4s;
+}
+.hexagon::before, .hexagon::after{
+	content:'';
+	position:absolute;
+	width:0;
+	border-left:150px solid transparent;
+	border-right:150px solid transparent;
+	-webkit-transition:all 0.4s;
+	-moz-transition:all 0.4s;
+	transition:all 0.4s;
+
+}
+.hexagon::before{
+	bottom:100%;
+	left:0;
+	border-bottom:86.6px solid black;
+}
+.hexagon::after{
+	top:100%;
+	width:0;
+	left:0;
+	border-top:86.6px solid black;
+}
+.contactContainer{
+	background:tomato;
+	padding-top:30px;
+	padding-bottom:50px;
+	display:inline;
+	float:left;
+}
+.paddingReset{
+	padding-left:0;
+	padding-right:0;
+}
+.hexagon h1{
+	color:#fff;
+	line-height:3.5;
+	text-align: center;
+	font-family:'Raleway',sans-serif;
+}
+.hexagon:hover{
+		background:#fff;
+		}
+.hexagon:hover::after{
+	border-top:86.6px solid white;
+}
+.hexagon:hover::before{
+	border-bottom:86.6px solid white;
+}
+.hexagon:hover h1{
+	color:#000;
+}
+.hexagon .fa{
+	font-size:100px;
+}
+.koreBox{
+	width:100%;
+	height:auto;
+	margin-bottom:20px;
+	padding-left:20px;
+	padding-right:10px;
+	padding-bottom:10px;
+	padding-top:10px	;
+}
+.koreItem{
+	padding-left: 20px;
+	box-shadow: 0px 2px 2px #d2d2d2;
+	padding-right:20px;
+	padding-bottom:10px;
+	padding-top:10px;
+	border:2px double white;
+	margin:5px;	
+}
+.koreItem .koreImg{
+	margin:auto;
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+
+}
+.KoreImg img{
+	width:100%;
+	height:100%;
+	border-radius:50%;
+}
+.koreItem .KoreName{
+	color:#fff;
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom:5px;
+}
+.koreItem .KoreTeam{
+	color:rgb(60,100,178);
+	text-align: center;
+	padding-bottom:10px;
+	border-bottom:2px solid rgb(60,100,178);
+} 
+.koreItem .KoreDesc{
+	color:#fff;
+	line-height:1.7;
+	font-size:15px;
+}
+.container{
+	background:#000;
+	position:fixed;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:-1;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+.koreBox .close{
+	color:#fff;
+	text-align: center;
+	padding-bottom:20px;
+
+}
+.koreBox .teamTitle{
+	color:#fff;
+	text-align: center;
+}
+</style>
+<div >
+<div class="col-md-12 col-xs-12 paddingReset">
+<div class="contactContainer col-md-12 col-xs-12">
+<div class="col-md-3 col-xs-12 hexagon"><h1><span class="bucket">TECH</span>
+<i class="fa fa-laptop"></i></h1>
+</div>
+<div class="col-md-3 col-xs-12 hexagon"><h1><span class="bucket">HR</span>
+<i class="fa fa-users"></i></h1>
+</div>
+<div class="col-md-3 col-xs-12 hexagon"><h1><span class="bucket">IR</span>
+<i class="fa fa-angellist"></i></h1>
+</div>
+<div class="col-md-3 col-xs-12 hexagon"><h1><span class="bucket">MEDIA</span>
+<i class="fa fa-camera"></i></h1>
+</div>
+<div class="col-md-3 col-xs-12 hexagon"><h1><span class="bucket">OPS</span>
+<i class="fa fa-bus"></i></h1>
+</div>
+<div class="col-md-3 col-xs-12 hexagon"><h1><span class="bucket">DESIGN</span>
+<i class="fa fa-paint-brush"></i></h1>
+</div>
+<div class="col-md-3 col-xs-12 hexagon"><h1><span class="bucket">EVENTS</span>
+<i class="fa fa-bullhorn"></i></h1>
+</div>
+<div class="col-md-3 col-xs-12 hexagon"><h1><span class="bucket">FINANCE</span>
+<i class="fa fa-inr"></i></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container paddingReset">
+<div class="col-md-12 col-xs-12 koreBox">
+	<h1 class="teamTitle col-md-12 col-xs-12">EVENTS BUCKET</h1>
+	<h5 class="col-md-12 col-xs-12  close">CLOSE</h5>
+	<div class="koreItem col-md-3 col-md-push-1 col-xs-12">
+		<div class="KoreImg">
+			<img src="images/blogPic2.png"/>
+	</div>
+	<div class="col-md-12">
+		<h3 class="KoreName">venkatakrishnan ranganathan</h3>
+		<h4 class="KoreTeam">guest lectures <i class="fa fa-microphone"></i></h4>
+	</div>
+	<div class="col-md-12">
+		<div class="KoreDesc">
+			<p>Lorem Ipsum stuff about Lorem Ipsum stuff about Lorem Ipsum stuff about 
+				Lorem Ipsum stuff about Lorem Ipsum stuff about Lorem Ipsum stuff about
+				Lorem Ipsum stuff about Lorem Ipsum stuff about Lorem Ipsum stuff about 
+			</p>
+		</div>
+	</div>
+</div>
+<div class="koreItem col-md-3 col-md-push-1 col-xs-12">
+		<div class="KoreImg">
+			<img src="images/blogPic2.png"/>
+	</div>
+	<div class="col-md-12">
+		<h3 class="KoreName">venkatakrishnan ranganathan</h3>
+		<h4 class="KoreTeam">xceed <i class="fa fa-plane"></i></h4>
+	</div>
+	<div class="col-md-12">
+		<div class="KoreDesc">
+			<p>Lorem Ipsum stuff about Lorem Ipsum stuff about Lorem Ipsum stuff about 
+				Lorem Ipsum stuff about Lorem Ipsum stuff about Lorem Ipsum stuff about
+				Lorem Ipsum stuff about Lorem Ipsum stuff about Lorem Ipsum stuff about 
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="koreItem col-md-3 col-md-push-1 col-xs-12">
+		<div class="KoreImg">
+			<img src="images/blogPic2.png"/>
+	</div>
+	<div class="col-md-12">
+		<h3 class="KoreName">venkatakrishnan ranganathan</h3>
+		<h4 class="KoreTeam">guest lectures</h4>
+	</div>
+	<div class="col-md-12">
+		<div class="KoreDesc">
+			<p>Lorem Ipsum stuff about Lorem Ipsum stuff about Lorem Ipsum stuff about 
+				Lorem Ipsum stuff about Lorem Ipsum stuff about Lorem Ipsum stuff about
+				Lorem Ipsum stuff about Lorem Ipsum stuff about Lorem Ipsum stuff about 
+			</p>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+<script>
+$(".hexagon .fa").fadeOut(0);
+$(".hexagon").hover(function(){
+	$(this).find(".bucket").fadeOut(0).finish();
+	$(this).find(".fa").fadeIn(200).finish();
+}, function(){
+	$(this).find(".bucket").fadeIn(200);
+	$(this).find(".fa").fadeOut(0);
+});
+$(".hexagon").click(function(){
+	$(".contactContainer").fadeOut();
+});
+$(".close").click(function(){
+	$(".contactContainer").fadeIn();
+});
+</script>
+</html>
