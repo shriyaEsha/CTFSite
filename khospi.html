@@ -1,16 +1,35 @@
-<html>
+<!DOCTYPE html>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/animate.css" rel="stylesheet">
 <link href="ksite.css" rel="stylesheet">
 <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
+<!--clickfx-->
+     <link rel="stylesheet" type="text/css" href="css/clickfx/component.css" />
+     <link rel="stylesheet" type="text/css" href="css/clickfx/demo.css" />
+
+     <script src="js/tabs/modernizr.custom.js"></script>
+     <script src="js/clickfx/modernizr.custom.js"></script>
+
+
+
+<script src="js/clickfx/classie.js"></script>
 <script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 
-<script src="js/bootstrap.min.js"></script>
+
+<style>
+body{
+  overflow-x:hidden !important;
+  width:100%;
+  height:100%;
+}
 
 
+</style>
+<!--navbar-->
 
-<div class="col-md-12 headerBox hidden-xs hidden-sm" style="position:fixed">
+<div class="col-md-12 headerBox hidden-xs hidden-sm">
 <div class="col-md-4 ">
 <img src="images/ceg_desc.png" class="headerPics" id="ceg"/>
 </div>
@@ -24,7 +43,7 @@
 <div class="bg">
 <div class="overlay">
 
-  <nav class="navbar">
+  <nav class="navbar" >
     <div class="container-fluid paddingReset">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -35,7 +54,7 @@
           <span class="icon-bar bottom-bar"></span>
         </button>
        <!-- <a class="navbar-brand" href="#">
-         <img id="ctf-logo" style="background:url(images/gplay.png); background-color:white;width:" alt="ctf-logo" class="pull-left" src="images/k.png">
+         <img id="ctf-logo" style="background:url(images/gplay.png); background-color:white;width:" alt="ctf-logo" class="text-center" src="images/k.png">
          
        </a> -->
     </div>
@@ -162,29 +181,44 @@
             <i class="fa fa-comments-o"></i>
           </div>
          </li>
-         <li class="smalleritem">
-          <a class="text">LOGIN on FB</a>
-          <div class="topVane">
-            <i class="fa fa-facebook"></i>
-          </div>
-         </li>
-         <li class="smalleritem">
-          <a class="text">LOGIN on G+</a>
-          <div class="topVane">
-            <i class="fa fa-google"></i>
-          </div>
-         </li>
-         <li class="smalleritem">
-          <a class="text">LOGIN on K!</a>
+         <li id="loginNav" class="smalleritem hidden-xs">
+          <a class="text">LOGIN</a>
           <div class="topVane">
             <i class="fa fa-lock"></i>
           </div>
          </li>
+         <li class="logindrop dropdown hidden-md hidden-lg hidden-sm">
+          <a href="#" class="text dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LOGIN <span class="caret"></span></a>
+          <ul class="dropdown-menu loginNavElem">
+            <li class="eventCircleNav"><a href="#"><i class="fa fa-gear"></i>
+                <span class="sideText">K!</span>
+                </a>
+              </li>
+            <li class="eventCircleNav"><a href="#"><i class="fa fa-facebook"></i>
+                <span class="sideText">FACEBOOK</span>
+                </a>
+              </li>
+            <li class="eventCircleNav"><a href="#"><i class="fa fa-google"></i>
+                <span class="sideText">Google+</span>
+                </a>
+              </li>
+         </ul><!-- 
+         <li class="searchInput">
+            <form>
+            <div class="col-md-11 text-center">
+              <input type="text" id="searchdata" />
+            </div>
+            <div class="col-md-1">
+              <a class="submitsearch"><i class="fa fa-search fa-2x fa-fw"></i></a>
+            </div>
+            </form>
+         </li> -->
+       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
  <div class="col-md-12 col-xs-12 eventHeader" style="background:url(images/patterns/sativa.png)">
- <ul class="eventCats col-md-12 col-xs-12 col-md-push-3">
+ <ul class="eventCats col-md-12 col-xs-12 col-md-push-2">
             <li class="eventCircle"><a href="slide-section.html"><i class="fa fa-gear"></i></a>
                 <div class="btmText">Engineering</div>
             </li>
@@ -230,8 +264,74 @@
           </ul>
 </div>
 
-</div><!-- overlay -->
+<!--login header -->
+<div class="col-md-12 col-xs-12 loginHeader" style="background:url(images/patterns/sativa.png)">
+ <ul class="eventCats col-md-12 col-xs-12 col-md-push-4">
+            <li class="eventCircle"><a href="slide-section.html"><i class="fa fa-gear"></i></a>
+                <div class="btmText">K! Login</div>
+            </li>
+           <li class="eventCircle" style="margin-left:25px"><i class="fa fa-facebook"></i>
+              <div class="btmText">Facebook Login</div>
+            </li>
+            <li class="eventCircle"><i class="fa fa-google"></i>
+              <div class="btmText">Google+ Login</div>
+            </li>
+          </ul>
 </div>
+
+<!--put components here -->
+<div class="col-md-12 col-xs-12 paddingReset">
+<div class="container">
+<ul class="hospi_icons col-md-12 col-xs-12 paddingReset">
+<li class="hospi_icon col-md-2 col-xs-12">
+  <i class="fa fa-anchor text-center"></i>
+  <h5 class="btmText ">INTRODUCTION</h5>
+</li>
+<li class="hospi_icon col-md-2 col-xs-12">
+  <i class="fa fa-suitcase text-center"></i>
+  <h5 class="btmText ">ACCOMODATION</h5>
+</li>
+<li class="hospi_icon col-md-2 col-xs-12">
+  <i class="fa fa-bullhorn text-center"></i>
+  <h5 class="btmText ">INSTRUCTIONS</h5>
+</li>
+<li class="hospi_icon col-md-2 col-xs-12">
+  <i class="fa fa-map-marker text-center"></i>
+  <h5 class="btmText ">REACHING CEG</h5>
+</li>
+<li class="hospi_icon col-md-1 col-xs-12">
+  <i class="fa fa-info text-center"></i>
+  <h5 class="btmText ">FAQ</h5>
+</li>
+<li class="hospi_icon col-md-2 col-xs-12">
+  <i class="fa fa-phone text-center"></i>
+  <h5 class="btmText ">CONTACT</h5>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+</div><!-- overlay -->
+
+
+</div>
+
+<!--navbar ends-->
+
+
+<script>
+$(document).ready(function(){
+$(".navbar-toggle").click(function(){
+  closeall();
+  
+});
+});
+  
+</script>
+
+<!--navbar script-->
 <script>
 $(document).ready(function(){
 $(".navbar-toggle").click(function(){
@@ -244,9 +344,13 @@ $(".navbar-toggle").click(function(){
 if( $(window).width() >= 600)
 {
   $(".eventHeader").animate({'opacity':"0"},1000,'easeOutElastic').fadeOut();
+  $(".loginHeader").animate({'opacity':"0"},1000,'easeOutElastic').fadeOut();
 
   $("#eventsNav").hover(function(){
   $(".eventHeader").animate({'opacity':"1"},100,'easeOutElastic').fadeIn();
+  });
+  $("#loginNav").hover(function(){
+  $(".loginHeader").animate({'opacity':"1"},100,'easeOutElastic').fadeIn();
   });
 
   $(".navbar-nav li").hover(function(){
@@ -260,6 +364,12 @@ if( $(window).width() >= 600)
   $(".wkshopHeader").animate({'opacity':"0"});
   $(".wkshopHeader").fadeOut().finish();
   }
+
+    if($(this).attr("id") != "loginNav" )
+  {
+  $(".loginHeader").animate({'opacity':"0"});
+  $(".loginHeader").fadeOut().finish();
+  }
   });
 
   $(".eventHeader").hover(function(){
@@ -270,6 +380,11 @@ if( $(window).width() >= 600)
   $(".wkshopHeader").hover(function(){
   }, function(){
    $(".wkshopHeader").animate({'opacity':"0"}).fadeOut();
+  });
+
+  $(".loginHeader").hover(function(){
+  }, function(){
+   $(".loginHeader").animate({'opacity':"0"}).fadeOut();
   });
   
   $(".wkshopHeader").animate({'opacity':"0"}).fadeOut().finish();

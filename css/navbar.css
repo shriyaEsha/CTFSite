@@ -30,9 +30,9 @@ nav.navbar {
     border-radius: 0;
     margin-bottom: 0;
     padding-bottom: 5px;
+	background:crimson;
 }
 .navbar-nav{
-
     overflow:hidden;
 }
 .nav.navbar-nav a.navelem{
